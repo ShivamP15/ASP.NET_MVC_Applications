@@ -182,8 +182,9 @@ namespace Lab1
         static IList<string> LambdaSortWords(IList<string> wordsList)
         {
             DateTime startTime = DateTime.Now;
-            
-            IList<string> linqSortedList = wordsList.OrderBy(word => word).ToList();
+
+            //IList<string> linqSortedList = wordsList.OrderBy(w => w).ToList();
+            IList<string> linqSortedList = (from w in wordsList orderby w select w).ToList();
 
             DateTime endTime = DateTime.Now;
             TimeSpan duration = endTime - startTime;
