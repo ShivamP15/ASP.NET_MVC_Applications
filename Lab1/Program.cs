@@ -1,6 +1,6 @@
 ﻿using System.Collections.Immutable;
-using System.IO;
 using System.Net;
+using System.IO;
 using System.Linq;
 
 namespace Lab1
@@ -183,7 +183,7 @@ namespace Lab1
         {
             DateTime startTime = DateTime.Now;
             
-            IList<string> linqSortedList = wordsList.OrderBy(w => w).ToList();
+            IList<string> linqSortedList = wordsList.OrderBy(word => word).ToList();
 
             DateTime endTime = DateTime.Now;
             TimeSpan duration = endTime - startTime;
