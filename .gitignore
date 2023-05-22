@@ -1,3 +1,4 @@
 # Lab 1 ignore folder
-Lab1/bin
-Lab1/obj
+Lab1/bin/*
+Lab1/obj/*
+Lab1/.vs/*
