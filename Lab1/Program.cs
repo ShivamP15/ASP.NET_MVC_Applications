@@ -147,20 +147,21 @@ namespace Lab1
 
         static IList<string> BubbleSortWords(IList<string> wordsList)
         {
-            int n = wordsList.Count - 1;
+            IList<string> BubbleSortList = wordsList.ToList();
+            int n = BubbleSortList.Count - 1;
             bool swapped = true;
             DateTime startTime = DateTime.Now;
 
             while (swapped)
             {
                 swapped = false;
-                for (int i = 1; i < n; i++)
+                for (int i = 0; i < n; i++)
                 {
-                    if (string.Compare(wordsList[i], wordsList[i+1]) > 0)
+                    if (string.Compare(BubbleSortList[i], BubbleSortList[i+1]) > 0)
                     {
-                        string temp = wordsList[i+1];
-                        wordsList[i+1] = wordsList[i];
-                        wordsList[i] = temp;
+                        string temp = BubbleSortList[i+1];
+                        BubbleSortList[i+1] = BubbleSortList[i];
+                        BubbleSortList[i] = temp;
                         swapped = true;
                     }
                 }
@@ -168,14 +169,14 @@ namespace Lab1
             DateTime endTime = DateTime.Now;
             TimeSpan duration = endTime - startTime;
             /*
-            foreach (string w in wordsList)
+            foreach (string w in BubbleSortList)
             {
                 Console.WriteLine(w);
             }
             */
             Console.Write("Sorting Time: {0:0.0} ms\n", duration.TotalMilliseconds);
-            Console.WriteLine("The number of words is " + wordsList.Count);
-            return wordsList;
+            Console.WriteLine("The number of words is " + BubbleSortList.Count);
+            return BubbleSortList;
         }
 
         static IList<string> LambdaSortWords(IList<string> wordsList)
