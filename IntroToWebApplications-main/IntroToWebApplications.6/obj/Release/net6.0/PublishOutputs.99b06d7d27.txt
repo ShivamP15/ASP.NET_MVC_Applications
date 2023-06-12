@@ -1,0 +1,7 @@
+C:\Coding Projects\Dot NET\IntroToWebApplications-main\IntroToWebApplications.6\obj\Release\net6.0\PubTmp\Out\IntroToWebApplications.6.exe
+C:\Coding Projects\Dot NET\IntroToWebApplications-main\IntroToWebApplications.6\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Coding Projects\Dot NET\IntroToWebApplications-main\IntroToWebApplications.6\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Coding Projects\Dot NET\IntroToWebApplications-main\IntroToWebApplications.6\obj\Release\net6.0\PubTmp\Out\IntroToWebApplications.6.dll
+C:\Coding Projects\Dot NET\IntroToWebApplications-main\IntroToWebApplications.6\obj\Release\net6.0\PubTmp\Out\IntroToWebApplications.6.deps.json
+C:\Coding Projects\Dot NET\IntroToWebApplications-main\IntroToWebApplications.6\obj\Release\net6.0\PubTmp\Out\IntroToWebApplications.6.runtimeconfig.json
+C:\Coding Projects\Dot NET\IntroToWebApplications-main\IntroToWebApplications.6\obj\Release\net6.0\PubTmp\Out\IntroToWebApplications.6.pdb

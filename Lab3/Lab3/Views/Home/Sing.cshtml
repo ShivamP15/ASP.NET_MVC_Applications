@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Singing...";
+}
+<body>
+    <table>
+        <form asp-controller="Home" asp-action="SongForm" method="post">
+            <input type="submit" value="Play Again" />            
+        </form>
+        <br />
+        <br />
+        @for (int i = Int32.Parse(ViewBag.numOfMonkeys); i >= 0; i--)
+        {
+            string pronoun = i % 2 == 0 ? "her" : "his";
+            string plural = i == 1 ? "monkey" : "monkeys";
+            string numMonkey = i == 1 ? "He" : i == 0 ? "None" : "One";
+            bool IsNoMonkey = i == 0;
+            string lastLine = i == 0 ? "\"Put those monkeys back in bed!\"" : "\"No more monkeys jumping on the bed!\"";
+            <p>@(IsNoMonkey ? "No" : i) little @plural jumping on the bed<br />
+                @numMonkey fell off and bumped @pronoun head<br />
+                Mama called the doctor and the doctor said<br />
+                @lastLine</p>
+            <br />
+        }
+    </table>
+</body>

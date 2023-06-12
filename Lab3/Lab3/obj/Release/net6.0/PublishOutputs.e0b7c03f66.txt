@@ -1,0 +1,7 @@
+C:\Coding Projects\Dot NET\Lab3\Lab3\obj\Release\net6.0\PubTmp\Out\Lab3.exe
+C:\Coding Projects\Dot NET\Lab3\Lab3\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Coding Projects\Dot NET\Lab3\Lab3\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Coding Projects\Dot NET\Lab3\Lab3\obj\Release\net6.0\PubTmp\Out\Lab3.dll
+C:\Coding Projects\Dot NET\Lab3\Lab3\obj\Release\net6.0\PubTmp\Out\Lab3.deps.json
+C:\Coding Projects\Dot NET\Lab3\Lab3\obj\Release\net6.0\PubTmp\Out\Lab3.runtimeconfig.json
+C:\Coding Projects\Dot NET\Lab3\Lab3\obj\Release\net6.0\PubTmp\Out\Lab3.pdb

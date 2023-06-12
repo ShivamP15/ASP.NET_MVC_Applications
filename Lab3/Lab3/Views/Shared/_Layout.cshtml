@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Lab 3 by Shivam Patel!</h1>
+        <b>Student number:</b> 041043423
+        <br />
+        <b>Student email:</b> <a href="mailto: pate0968@algonquinlive.com">pate0968&#64;algonquinlive.com</a>
+        <br />
+        <br />
+        @Html.ActionLink("Home", "Index", "Home")
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        @Html.ActionLink("Show the song!", "SongForm", "Home")
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        @Html.ActionLink("Students", "CreateStudent", "Home")
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <p><b>Q1.</b> Layout allows you to create a common view for all the web pages in an application.</p>
+        <p>
+            <b>Q2.</b> "CSS" and "_Layout" location and reason to locate at that place:
+            <ul>
+                <li>CSS file is stored in "wwwroot" folder because it servers as a web root folder and we can access it using folder name in URL.</li>
+                <li>Layout is in folder called "Shared" so that it can be share with all the other web page as template view.</li>
+            </ul>
+        </p>
+        <p><b>Q3.</b> In the "_Layout" file, in the head, inside &lt;link /&gt;, with the help of tags I have specified StyleSheet.css file location told it to tread the located file as a StyleSheet.</p>
+        <p><b>Q4.</b> In "_ViewStart.cshtml", default layout is specified in following patter:
+            <pre>
+                &#64;{
+                    Layout = "_Layout";
+                }
+            </pre></p>
+    </footer>
+</body>
+</html>

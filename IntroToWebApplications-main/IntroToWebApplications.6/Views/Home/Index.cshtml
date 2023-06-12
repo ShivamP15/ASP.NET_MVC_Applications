@@ -1,0 +1,162 @@
+﻿<style>
+    .answer {
+        display: none;
+    }
+</style>
+@section Scripts {
+    <script>
+        $(document).ready(function () {         // run the code when html doc is loaded
+            $('.question').click(function () {      // select all the question from the class "question" defined in foreach
+                var answer = $(this).find('.answer');   // select child element name "answer" from the particular question selected     
+                $('.answer').not(answer).slideUp();     // Close other answers
+                answer.slideToggle();       // Toggle the selected answer
+            });
+        });
+    </script>
+}
+
+
+@{
+    var questionAndAnswerPairs = new List<KeyValuePair<string, string>>()
+    {
+        new KeyValuePair<string, string>("1. Is C# a strongly or loosely typed language? Why?",
+            "C# is a strongly typed language. Every variable and expression in C# has to be assigned to a specific data type (int, String, var, float, double, dynamic, bool, etc.)."+
+            " Once a variable or an expression is declare to certain type, it cannot be assigned a value of a different type."),
+        
+        new KeyValuePair<string, string>("2. Is C# declarative or imperative? Why?",
+            "C# is an imperative language. Imperative programming focuses on describing a sequence of statements that change the program's state."+
+            " In C#, you write code in a procedural manner, specifying step-by-step instructions for the computer to follow. You explicitly state what actions should be performed and in what order."),
+        
+        new KeyValuePair<string, string>("3. Explain implicit types in C#, why we use them, and give an example.",
+            "In C#, implicit typing allows the compiler to infer the type of a variable based on the expression used to initialize it."+
+            " Instead of explicitly specifying the type, you can use the var keyword to let the compiler determine the appropriate type."+
+            " Implicit typing can make code more concise and readable, especially when the type is obvious from the initialization expression."+
+            "<br /><b>Example:</b> 1. var number = 4; \\\\ int"+
+            "<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+
+            "2. var decimal = 9.23; \\\\ double<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+
+            "3. var msg = \"Hey there!\"; \\\\ string"),
+        
+        new KeyValuePair<string, string>("4. What is the difference between a Value Type and a Reference type?",
+            "Value type are stored directly on the stack memory within other objects, and they are assigned by copying the entire value. Value type examples are 'int', 'float', 'double', etc.."+
+            " On the contrary, reference type stores a reference to the data on the heap. Their assignments are done by copying the reference rather than the actual data. Reference type examples are classes, interfaces, pointer variables, etc.."),
+        
+        new KeyValuePair<string, string>("5. What is a ‘Property’ in C# as it relates to classes and objects?",
+            "In C#, a property is a way to access and manipulate the data of a class or struct. It consist of a getter and setter method that allow reading and writing to a private varaible."+
+            " In other words, properties allows other classes to access their private fields/variables while maintaining encapsulation adn providing additional login or validation if needed."),
+        
+        new KeyValuePair<string, string>("6. Describe the MVC design pattern. Explain its components.",
+            "The MVC aka Model-View-Controller design patter is a software architecture pattern commonly used in the development of user interface. It seperate the application into three main components:"+
+            "<ul>"+
+                "<li><b>Model:</b> Represents the data and business logic of the application. I encapsulates the application's state and behaviour, providing method to manipulate and access the data.</li>"+
+                "<li><b>View:</b> Represents the prersentation layer of the application. It defines how the data is represented to the user and handles user interactions.</li>"+
+                "<li><b>Controller:</b> Acts as an intermediary between the model and the view. It recieve the input from the user via the view, manipulate the model based on that input and updates the view to reflect the changes.</li>"+
+            "</ul>"),
+        
+        new KeyValuePair<string, string>("7. Describe the purpose of the Program.cs class in this project.",
+            "Program.cs class serves as the entry of the application. It contains the main method and the main method is automatically called when the application starts and is responsible for initializing and configuring the application."+
+            " In an MVC application, the Program.cs class typically configures the web server and set up the hosting environment."),
+        
+        new KeyValuePair<string, string>("8. MVC Core applications can ‘host’ themselves: true or false.",
+            "True, MVC core applications can host themselves."),
+        
+        new KeyValuePair<string, string>("9. Explain what happens in memory when we make a value type nullable.",
+            "When we make a value type nullable in C#, it means that we enable the value type to have a null value assigned to it. This is achieved by wrapping the value type in a Nullable<T> struct, also referred to as a 'nullable value type.'"+
+            " In memory, a nullable value type consists of two parts. Firstly, there is a boolean flag that indicates whether the value has a valid value (true) or if it is null (false)."+
+            " Secondly, if the value is not null, it contains the actual value of the underlying value type. This allows us to work with value types as if they were nullable."),
+        
+        new KeyValuePair<string, string>("10. Explain anonymous types and why we use them and give an example.",
+            "Anonymous types in C# allow us to create objects without explicitly defining a class. They are useful when we want to create temporary objects to hold a set of related values without creating a formal class structure."+
+            " Anonymous types are defined using the new keyword and an object initializer syntax, where properties are defined on-the-fly. They are often used in scenarios like LINQ queries where we need to project specific properties from a collection."+
+            "<br /> <b>Example:</b> var name = new { First = \"Shivam\", Last = \"Patel\" };"),
+       
+        new KeyValuePair<string, string>("11. Explain Git branches and why we use them.",
+            "Git branches serve as a way to isolate changes, provide a separate working environment, and facilitate collaboration."+
+            " Each branch has its own commit history, allowing for easy tracking of changes and the ability to merge branches back into the main branch ('master' or 'main' branch) when the changes are ready."+
+            " Branches enable efficient and organized development workflows and help manage complex projects with multiple developers."),
+        
+        new KeyValuePair<string, string>("12. Explain dependency injection and why we use it?",
+            "Dependency injection is a software design pattern and a technique used in many frameworks, including ASP.NET Core."+
+            " It is used to manage the dependencies between different components of an application. Instead of a component directly creating and managing its dependencies, dependencies are 'injected' into the component from an external source. "+
+            "This allows for loose coupling, modularity, and easier testing and maintenance of the codebase."+
+            " By separating the creation and management of dependencies, dependency injection promotes better code organization, reusability, and flexibility in configuring the application's behavior.")
+    };
+}
+
+<h1>About Me!</h1>
+<b>First name:</b> Shivam
+<br />
+<b>Last name:</b> Patel
+<br />
+<b>Student no.:</b> 041043423
+<br />
+<b>Student &#64;:</b> <a href="mailto: pate0968@algonquinlive.com">pate0968&#64;algonquinlive.com</a>
+<p>
+    <b>About me:</b> I am a student from Gujarat, India, studying at Algonquin College as an international student. I am currently in Level 6 of CET. I prioritize punctuality and strive to bring creativity into my work. I enjoy discovering new things and forming new friendships.
+</p>
+<p>
+    <b>My Expectation:</b> I am interested in working as a Full-stack developer after I graduate and I believe getting experience with DotNET via this course is very valuable. I don't like to do coding in front-end languages much but I think I will enjoy coding in Controllers and models in C#.
+</p>
+
+<br/><h3>To view the answers, click on the questions:-</h3>
+@foreach (var qa in questionAndAnswerPairs)
+{
+    <div class="question">
+        <h5>@qa.Key</h5>
+        <div class="answer">
+            <b>Ans:</b> @Html.Raw(qa.Value)
+        </div>
+    </div>
+}
+
+
+
+
+
+
+
+
+
+
+@*
+@model IntroToWebApplications._6.Models.Person
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Simple Web Form</h3>
+<form asp-controller="Home" asp-action="Index" method="post">
+    <table>
+        <tr>
+            <td>
+                First Name:
+            </td>
+            <td>
+                <input type="text" id="FirstName" name="FirstName" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Last Name:
+            </td>
+            <td>
+                <input type="text" id="LastName" name="LastName" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit">Process</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+@if (Model != null)
+{
+    <h3>Output of Web Form</h3>
+    @(ViewData["Message"])
+    <br />
+    @(Model.FirstName + " " + Model.LastName)
+}
+*@
