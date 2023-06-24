@@ -2,5 +2,13 @@
 Lab1/bin/
 Lab1/obj/
 Lab1/.vs/
-Lab3/.vs/
+
+# Lab 2 ignore folder
 IntroToWebApplications-main/.vs/
+IntroToWebApplications-main/IntroToWebApplications.6/bin/
+IntroToWebApplications-main/IntroToWebApplications.6/obj/
+
+#Lab 3 ignore folder
+Lab3/.vs/
+Lab3/Lab3/bin/
+Lab3/Lab3/obj/
