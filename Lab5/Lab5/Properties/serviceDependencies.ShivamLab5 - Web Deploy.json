@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/ShivamLab5/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsDefaultDBConnection_AAE113F790",
+      "secretStore": null,
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/shivam-cst8359-labs/databases/ShivamLab5",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:DefaultDBConnection",
+      "dynamicId": null
+    }
+  }
+}
