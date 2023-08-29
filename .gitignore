@@ -19,3 +19,24 @@ Lab4/Lab4/bin/
 Lab4/Lab4/obj/
 Lab4/Lab4/appsettings.json
 Lab4/Lab4/appsettings.Development.json
+
+#Lab 5 ignore folders and file
+Lab5/.vs/
+Lab5/Lab5/bin/
+Lab5/Lab5/obj/
+Lab5/Lab5/appsettings.json
+Lab5/Lab5/appsettings.Development.json
+
+#Lab 5 ignore folders and file
+Lab6/.vs/
+Lab6/Lab6/bin/
+Lab6/Lab6/obj/
+Lab6/Lab6/appsettings.json
+Lab6/Lab6/appsettings.Development.json
+
+#Lab 4 ignore folders and file
+Assignment2/.vs/
+Assignment2/Lab4/bin/
+Assignment2/Lab4/obj/
+Assignment2/Lab4/appsettings.json
+Assignment2/Lab4/appsettings.Development.json
