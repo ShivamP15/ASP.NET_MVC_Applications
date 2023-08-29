@@ -12,6 +12,8 @@ IntroToWebApplications-main/IntroToWebApplications.6/obj/
 Lab3/.vs/
 Lab3/Lab3/bin/
 Lab3/Lab3/obj/
+Lab3/Lab3/appsettings.json
+Lab3/Lab3/appsettings.Development.json
 
 #Lab 4 ignore folders and file
 Lab4/.vs/
