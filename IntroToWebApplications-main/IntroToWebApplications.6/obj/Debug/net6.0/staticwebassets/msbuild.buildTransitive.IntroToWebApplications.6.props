@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\IntroToWebApplications.6.props" />
-</Project>
