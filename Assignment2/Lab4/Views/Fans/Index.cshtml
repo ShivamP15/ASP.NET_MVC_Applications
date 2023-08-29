@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Lab4.Models.Fan>
+﻿@model Lab4.Models.ViewModels.SportClubViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -13,19 +13,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.LastName)
+                LastName
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FirstName)
+                FirstName
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BirthDate)
+                BirthDate
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.Fans) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.LastName)
@@ -37,7 +37,9 @@
                 @Html.DisplayFor(modelItem => item.BirthDate)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Index" asp-route-id="@item.Id">Select</a> |
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="EditSubscription" asp-route-id="@item.Id">Edit Subscriptions</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
@@ -45,3 +47,31 @@
 }
     </tbody>
 </table>
+@if (Model.SportClubs != null)
+{
+    <h3>Member of following SportClubs</h3>
+    @if (Model.SportClubs.Count() <= 0)
+    {
+        <b>No subscription record exist</b>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.SportClubs)
+            {
+                <tr>
+                    <td>
+                        @item.Title
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+} 

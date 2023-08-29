@@ -1,0 +1,44 @@
+﻿@model Lab4.Models.ViewModels.SportClubViewModel
+@{
+    ViewData["Title"] = "EditSubscriptions";
+}
+
+<h1>Edit</h1>
+<h2>Fan Subscription</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Full Name
+            </th>
+            <td>
+                @Model.Fans.First().FullName
+            </td>
+        </tr>
+    </thead>
+</table>
+@foreach (var item in Model.SportClubs)
+{
+    <table >
+        <tr>
+            <td>
+                @item.Title
+            </td>
+            @if (Model.Subscriptions.Where(x => x.SportClubId == item.Id).Count() > 0)
+            {
+                <td>
+                    <a asp-action="RemoveSubscription" asp-route-SportClubId="@item.Id" asp-route-FanId="@Model.Fans.FirstOrDefault().Id">Unregister</a>
+                </td>
+            }
+            else
+            {
+                <td>
+                    <a asp-action="AddSubscription" asp-route-SportClubId="@item.Id" asp-route-FanId="@Model.Fans.FirstOrDefault().Id">Register</a>
+                </td>
+            }
+
+        </tr>
+    </table>
+}
+<a asp-action="Index">Back to List</a>
